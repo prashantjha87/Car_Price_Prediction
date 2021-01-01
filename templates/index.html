@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form With Html & Css</title>
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div>
+  
+  <form action="{{ url_for('predict')}}"method="post">
+    <h4 class="text-warning text-center pt-5">Predict Car Price</h4>
+
+    <label>
+      <input type="number" class="input" name="Present_Price" placeholder="Enter Present Price"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+      <input type="number" class="input" name="Kms_Driven" placeholder="Enter Kms Driven"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+	
+	    <label>
+      <input type="number" class="input" name="Owner" placeholder="Enter Owner 1 for first"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+      <input type="number" class="input" name="no_year" placeholder="Enter Number of Year"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+      <input type="number" class="input" name="Fuel_Type_Diesel" placeholder="Enter 1 if Fuel Type Diesel Else 0"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+      <input type="number" class="input" name="Fuel_Type_Petrol" placeholder="Enter 1 if Fuel Type Petrol Else 0"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+      <input type="number" class="input" name="Seller_Type_Individual" placeholder="Enter 1 if Seller Type Individual Else 0"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+      <input type="number" class="input" name="Transmission_Manual" placeholder="Enter 1 if Transmission Type Manual Else 0"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <button type="submit">Predict</button>
+  </form>
+</div>
+
+{{prediction_text}}
+ </body>
+</html>
